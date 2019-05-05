@@ -1,11 +1,18 @@
 module.exports = {
   siteMetadata: {
     title: `Meoo App`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `changing the way people interact with museums.`,
+    author: `@benbalderas`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `ckp042caikle`,
+        accessToken: `6cba42996bf41e4ba4245310157b90a62c39aaeb9c0388c96d4df0ff634510c8`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
